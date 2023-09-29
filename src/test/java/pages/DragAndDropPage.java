@@ -82,6 +82,7 @@ public class DragAndDropPage {
     }
 
     public void refreshPage() {
+        Selenide.sleep(2000);
         Selenide.executeJavaScript("window.location.reload(true);");
     }
 }

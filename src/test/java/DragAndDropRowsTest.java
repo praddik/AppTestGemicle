@@ -3,7 +3,7 @@ import baseConfig.BaseTest;
 import com.codeborne.selenide.ElementsCollection;
 import io.qameta.allure.Feature;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import pages.DragAndDropPage;
@@ -25,8 +25,8 @@ public class DragAndDropRowsTest extends BaseTest {
         open(url);
     }
 
-    @AfterTest
-    public void refreshPage() {
+    @AfterMethod
+    public void refreshPage(){
         dragAndDropPage.refreshPage();
     }
 
